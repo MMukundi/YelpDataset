@@ -1,8 +1,16 @@
-# Yelp Dataset for CptS 451 Spring 2022 Term Project
-* `yelp_CptS451_2022.zip` : Yelp dataset for the CptS 451 term project.  This dataset is a subset of the original Yelp dataset and it is filtered and cleaned to remove inconsistencies. 
-* `parseJSON_sample.py` : Sample code for parsing Yelp data
-* `yelpdata_sampleoutput.zip` : Sample parsed output of the given Yelp dataset. 
+# Milestone 1 for CptS 451 Spring 2022 Term Project
 
+Contributors:
 
+- Hugo Aponte
+- Marcel Mukundi
+- Joseph Steeb
 
+Initial draft of Milestone 1 parsing code.
+Team name not yet decided.
 
+To get started:
+
+- Make sure to create a directory named yelp_output
+- Unzip yelp_data.zip
+- Run parseJSON.py
