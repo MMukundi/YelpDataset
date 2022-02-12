@@ -21,7 +21,7 @@ CREATE TABLE FriendedUsers
 	user_id VARCHAR,
 	friended_by_id VARCHAR,
 	PRIMARY KEY (friended_by_id, user_id),
-	FOREIGN KEY(friended_by_id) REFERENCES Users(friended_by_id),
+	FOREIGN KEY(friended_by_id) REFERENCES Users(user_id),
 	FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
