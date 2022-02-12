@@ -27,7 +27,6 @@ CREATE TABLE Business (
 	business_id VARCHAR PRIMARY KEY,
 	business_rating FLOAT,
 	address VARCHAR,
-	hours VARCHAR,
 	state VARCHAR,
 	city VARCHAR,
 	zip INTEGER,
@@ -38,8 +37,15 @@ CREATE TABLE Business (
 	business_checkin_count INTEGER
 	attributes VARCHAR,
 	is_open INTEGER,
-	categories VARCHAR
 );
+
+CREATE TABLE Categories (
+	business_id VARCHAR,
+	category VARCHAR,
+	PRIMARY KEY (business_id, category),
+	FOREIGN KEY (business_id) REFERENCES Business(business_id)
+);
+	
 
 CREATE TABLE Tip (
 	user_id VARCHAR,
@@ -58,5 +64,23 @@ CREATE TABLE Check_Ins (
 	PRIMARY KEY (business_id),
 	FOREIGN KEY (business_id) REFERENCES Business(business_id)
 );
-	
+
+CREATE TABLE Hours (
+	business_id PRIMARY KEY,
+	monday_hours,
+	tuesday_hours,
+	wednesday_hours,
+	thursday_hours,
+	friday_hours,
+	saturday_hours,
+	sunday_hours,
+	FOREIGN KEY (business_id) REFERENCES Business(business_id)
+);
+
+CREATE TABLE Attributes (
+	business_id VARCHAR,
+	attribute VARCHAR,
+	PRIMARY KEY (business_id, attribute),
+	FOREIGN KEY (business_id) REFERENCES Business(business_id)
+);
 
