@@ -36,7 +36,7 @@ CREATE TABLE Businesses
 
 	longitude FLOAT,
 	latitude FLOAT,
-	stars FLOAT,
+	stars DOUBLE,
 
 	is_open INTEGER,
 
